@@ -1,12 +1,12 @@
 import { createApp } from 'vue'
 import store from './store'
 import counter from './components/counter.vue'
-import test from './components/forms/test.vue'
+import selectform from './components/Forms/selectForm.vue'
  
 const app = createApp({
     components:{
         counter,
-        test
+        selectform
     }
 })
 app.use(store)

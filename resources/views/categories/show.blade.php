@@ -6,13 +6,6 @@
     <h1>Affichage des Categories</h1>
     @csrf
     <div id="app">
-    <test content="Categorie :" fname="category"></test>
+    <selectform content="Categorie : " fname="category" :table="{{$categories}}"></selectform>
     </div>
-    <table>
-        @foreach ($categories as $category)
-            <tr>
-                <td>{{$category->name}}</td>
-            </tr>
-        @endforeach
-    </table>
 </html>

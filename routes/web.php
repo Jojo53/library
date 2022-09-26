@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\subcategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 //Categories
 Route::get('/category/show', [categoryController::class, 'show']);
+
+//SubCategories
+Route::get('/subcategory/show', [subcategoryController::class, 'show']);
