@@ -8,10 +8,10 @@
 </template>
 <script>
     export default{
-        props:[
-            'fname',
-            'content',
-            'table'
-        ]
+        props:{
+            fname: String,
+            content: String,
+            table: Array
+        }
     } 
 </script>

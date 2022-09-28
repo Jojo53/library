@@ -9,4 +9,7 @@ class Editor extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected $table='editors';
+    protected $primary_key='id';
+    protected $fillable=['name'];
 }

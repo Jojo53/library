@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class categoryController extends Controller
 {
+    #region Récupération
     /**
      * Récupération des données
      */
@@ -14,4 +15,5 @@ class categoryController extends Controller
         $categories = Category::all();
         return view('categories.show', ['categories'=>$categories]);
     }
+    #endregion
 }

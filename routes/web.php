@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\authorController;
 use App\Http\Controllers\categoryController;
+use App\Http\Controllers\editorController;
 use App\Http\Controllers\subcategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +21,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Categories
+#region Authors
+Route::get('/author/create', [authorController::class, 'create']);
+Route::post('/author/create',[authorController::class, 'valid']);
+Route::get('/author/update/{index}', [authorController::class, 'update']);
+Route::post('/author/updateValid', [authorController::class, 'updateValid']);
+Route::get('/author/delete/{index}', [authorController::class, 'delete']);
+Route::post('/author/deleteValid', [authorController::class, 'deleteValid']);
+#endregion
+#region Editors
+Route::get('/editor/create', [editorController::class, 'create']);
+Route::post('/editor/create', [editorController::class, 'valid']);
+Route::get('/editor/update/{index}', [editorController::class, 'update']);
+Route::post('/editor/updateValid', [editorController::class, 'updateValid']);
+Route::get('/editor/delete/{index}', [editorController::class, 'delete']);
+Route::post('/editor/deleteValid', [editorController::class, 'deleteValid']);
+#endregion
+#region Categories
 Route::get('/category/show', [categoryController::class, 'show']);
-
-//SubCategories
+#endregion
+#region SubCategories
 Route::get('/subcategory/show', [subcategoryController::class, 'show']);
+#endregion
